@@ -7,4 +7,5 @@ ExternalProject_Add(
         BUILD_IN_SOURCE 1
         CONFIGURE_COMMAND ./buildconf && ./configure --host=${MULTIARCH_TUPLE} --target=${MULTIARCH_TUPLE} --prefix=${CMAKE_INSTALL_PREFIX}
         INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
+        INSTALL_COMMAND make install
 )
