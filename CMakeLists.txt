@@ -1,3 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 project(sandbox-iot-forlinx)
-add_subdirectory(app)
+include("${CMAKE_SOURCE_DIR}/cmake/Paths.cmake")
+enable_testing()
+add_subdirectory(lib)
+#add_subdirectory(app)

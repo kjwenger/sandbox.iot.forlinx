@@ -10,7 +10,7 @@ CURRENT_DIR="$(pwd)"
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "${SCRIPTS_DIR}")"
 STAGING_DIR="${PROJECT_DIR}/staging/${MULTIARCH_TUPLE}"
-BUILD_DIR="${PROJECT_DIR}/build-${MULTIARCH_TUPLE}"
+BUILD_DIR="${PROJECT_DIR}/build.${MULTIARCH_TUPLE}"
 
 cd "${PROJECT_DIR}"
 mkdir -p "${BUILD_DIR}"
