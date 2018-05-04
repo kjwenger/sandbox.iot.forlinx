@@ -10,3 +10,5 @@ ExternalProject_Add(
         INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
         INSTALL_COMMAND make INSTALL_TOP=${CMAKE_INSTALL_PREFIX} install
 )
+add_dependencies(lua curl)
+add_dependencies(lua readline)
