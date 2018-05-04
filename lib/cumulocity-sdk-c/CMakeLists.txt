@@ -8,7 +8,7 @@ ExternalProject_Add(
         BUILD_IN_SOURCE 1
         BUILD_COMMAND make CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER} SYSROOT=${CMAKE_PREFIX_PATH}
         CONFIGURE_COMMAND cp Makefile.template Makefile
-        INSTALL_COMMAND cp <SOURCE_DIR>/lib/libsera.so <SOURCE_DIR>/lib/libsera.so.1 <SOURCE_DIR>/lib/libsera.so.1.2.2 ${CMAKE_INSTALL_PREFIX}/lib
+        INSTALL_COMMAND find <SOURCE_DIR>/lib -name * | xargs -I{} cp {} ${CMAKE_INSTALL_PREFIX}/lib && find <SOURCE_DIR>/include -name * | xargs -I{} cp {} ${CMAKE_INSTALL_PREFIX}/include
 )
 add_dependencies(cumulocity-sdk-c curl)
 add_dependencies(cumulocity-sdk-c lua)
